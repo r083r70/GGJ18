@@ -11,8 +11,6 @@ public class Piccione : MonoBehaviour {
     private void Start () {
         rb = GetComponent<Rigidbody>();
         ps = GetComponent<ParticleSystem>();
-        ps.loop = false;
-
     }
 
     private void Update () {
@@ -20,7 +18,7 @@ public class Piccione : MonoBehaviour {
             rb.AddForce(Vector3.up * forceModule, ForceMode.Impulse);
 	}
     
-    private void OnTriggerEnter(Collider collision) {
+    private void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.CompareTag("Borders"))
             ps.Play();
     }
