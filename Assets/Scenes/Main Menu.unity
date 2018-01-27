@@ -892,7 +892,6 @@ GameObject:
   - component: {fileID: 1517771834}
   - component: {fileID: 1517771833}
   - component: {fileID: 1517771838}
-  - component: {fileID: 1517771837}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -982,7 +981,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1517771837
+--- !u!114 &1517771838
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -990,7 +989,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1517771832}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -822479833, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Script: {fileID: 11500000, guid: e78ac2a73a14b4749b5f588ed070a701, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_NetworkPort: 7777
@@ -1063,17 +1062,6 @@ MonoBehaviour:
   matchSize: 4
   isNetworkActive: 0
   matchMaker: {fileID: 0}
---- !u!114 &1517771838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1517771832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e78ac2a73a14b4749b5f588ed070a701, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   maxConnections: 2
   serverPort: {fileID: 1169957762}
   defaultServerPort: 7777

@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
-public class NetworkMenu : NetworkBehaviour {
+public class NetworkMenu : NetworkManager
+{
     public int maxConnections = 2;
     public Text serverPort;
     public int defaultServerPort = 7777;
@@ -105,5 +107,11 @@ public class NetworkMenu : NetworkBehaviour {
 
         //Text l = animation.FindChild("ServerName").GetComponent<Text>();
         //l.text = name + " " + players;
+    }
+
+    public override void OnServerConnect(NetworkConnection conn)
+    {
+        Debug.Log("1");
+        SceneManager.LoadScene("PiccioneAnims", LoadSceneMode.Additive);
     }
 }

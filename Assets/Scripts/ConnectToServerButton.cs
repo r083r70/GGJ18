@@ -52,6 +52,6 @@ public class ConnectToServerButton : NetworkBehaviour
 		connection = con;
         gameName.text = con.gameName;
 
-        OnClick();
+        //OnClick();
 	}
 }
