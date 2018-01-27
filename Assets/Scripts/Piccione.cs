@@ -12,13 +12,13 @@ public class Piccione : NetworkBehaviour
     public float forceModule;
 
     public int initialLife = 6;
-    private int life;
+    public int life;
 
     public GameObject[] skins;
     public GameObject[] feavers;
 
     public float initialSpeed = 50f;
-    private float speed;
+    public float speed;
 
     public float minDeltaTimeDamage = 1;
     private float deltaTimeDamage;
