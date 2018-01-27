@@ -12,7 +12,7 @@ public class Piccione : NetworkBehaviour {
     public float forceModule;
 
     public int initialLife = 6;
-    public int life;
+    public int lifes;
 
     public GameObject[] skins;
     public GameObject[] feavers;
@@ -30,12 +30,13 @@ public class Piccione : NetworkBehaviour {
     private bool invincible;
     private bool noDowns;
 
-
+    public HudLife hudLife;
+    
     private void Start() {
         rb = GetComponent<Rigidbody>();
         tr = GetComponent<Transform>();
         ps = GetComponent<ParticleSystem>();
-        life = initialLife;
+        lifes = initialLife;
         deltaTimeDamage = 0f;
         damageIndex = -1;
         speed = initialSpeed;
@@ -61,10 +62,12 @@ public class Piccione : NetworkBehaviour {
         powerUpDuration += Time.deltaTime;
     }
 
-    private void RemoveLife(int damage = 1) {
-        if (deltaTimeDamage < minDeltaTimeDamage || life <= 0 || invincible)
+    private void RemoveLife() {
+        if (deltaTimeDamage < minDeltaTimeDamage || lifes <= 0 || invincible)
             return;
-        life -= damage;
+        lifes --;
+
+        hudLife.ChangeImage(lifes);
 
         foreach (GameObject skin in skins)
             skin.SetActive(false);
@@ -75,7 +78,7 @@ public class Piccione : NetworkBehaviour {
 
         ps.Play();
         deltaTimeDamage = 0f;
-        if (life <= 0)
+        if (lifes <= 0)
             Death();
     }
 
@@ -128,5 +131,13 @@ public class Piccione : NetworkBehaviour {
 
         invincible = noDowns = false;
         speed = initialSpeed;
+    }
+
+    private void OnDisable() {
+        Invoke("Stupid", 1);
+    }
+
+    private void Stupid() {
+        gameObject.SetActive(true);
     }
 }

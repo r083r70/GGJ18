@@ -10,8 +10,6 @@ public class PowerUpSpawner : MonoBehaviour {
     public float xDistanceSpawn;
     public float minY, maxY;
 
-    public float spawnProbability;
-
     private void Start() {
         deltaSpawnTime = 0f;
     }
@@ -25,8 +23,7 @@ public class PowerUpSpawner : MonoBehaviour {
     private void CreatePowerUp() {
         Vector3 initialPosition = piccione.position + Vector3.right * xDistanceSpawn;
         initialPosition.y = Random.Range(minY, maxY);
-        if (Random.value <= spawnProbability)
-            Instantiate(powerUp[Random.Range(0, powerUp.Length)], initialPosition, Quaternion.identity);
+        Instantiate(powerUp[Random.Range(0, powerUp.Length)], initialPosition, Quaternion.identity);
         deltaSpawnTime = 0f;
     }
 }
