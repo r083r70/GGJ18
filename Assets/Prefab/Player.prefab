@@ -145,7 +145,7 @@ MonoBehaviour:
     i14: 144
     i15: 191
   m_ServerOnly: 0
-  m_LocalPlayerAuthority: 1
+  m_LocalPlayerAuthority: 0
 --- !u!114 &114539920857689980
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -159,11 +159,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forceModule: 0
   initialLife: 6
+  life: 0
   skins: []
   feavers: []
   initialSpeed: 50
+  speed: 0
   minDeltaTimeDamage: 1
-  trigger: 0
 --- !u!114 &114732602942970790
 MonoBehaviour:
   m_ObjectHideFlags: 1
