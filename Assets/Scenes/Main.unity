@@ -143,10 +143,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 100
-  currentHealth: 0
-  sliderHealth: {fileID: 0}
-  flashColour: {r: 1, g: 0, b: 0, a: 0.1}
-  imageDamage: {fileID: 0}
 --- !u!1 &567350428
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,6 +422,7 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114268862941323580, guid: c03604f32fcff704f949d159c0c990bf, type: 2}
+    - {fileID: 114839426487457342, guid: c03604f32fcff704f949d159c0c990bf, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c03604f32fcff704f949d159c0c990bf, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1084741900
