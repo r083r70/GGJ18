@@ -4,36 +4,72 @@ using UnityEngine;
 
 public class PowerUps : MonoBehaviour
 {
-
+    public Piccione piccio;
     public GameObject pickupEffect;
     public float multiplier = 1.4f;
     public float duration = 4f;
+    PowerUpsaType PowerUpsaTypeTake;
 
+    enum PowerUpsaType
+    {
+        slowDown,
+        fireWall,
+        highQuality,
+        compression,
+        
+    }
+
+    private void Start()
+    {
+        piccio = GetComponent<Piccione>();
+    }
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        
+
+       if(other.gameObject.CompareTag("Player"))
+            
         {
 
-            StartCoroutine(Pickup(other));
+            switch (PowerUpsaTypeTake)
+            {
+                case PowerUpsaType.slowDown:
+                    piccio.speed /= multiplier;
+                    
+                    break;
+                case PowerUpsaType.fireWall:
+
+                    piccio.trigger = false;
+
+                    break;
+                case PowerUpsaType.highQuality:
+                    piccio.trigger = false;
+                   
+
+                    break;
+                case PowerUpsaType.compression:
+                default:
+                    piccio.transform.localScale *= multiplier;
+                   
+                    break;
+            }
+            other.gameObject.SetActive(false);
+           
+
         }
-    }
-    IEnumerator Pickup(Collider player)
-    {
-        Instantiate(pickupEffect, transform.position, transform.rotation);
-        //player.transform.localScale *= multiplier;
-        PlayerStats stats = player.GetComponent<PlayerStats>();
-        stats.Health *= multiplier;
-        
-        Destroy(gameObject);
 
-
-
-        yield return new WaitForSeconds(duration);
-        //stats.health /= multiplier;
-
-        Destroy(gameObject);
 
     }
+
+   
+
+
+
+
+
+
+
+
 
 
 

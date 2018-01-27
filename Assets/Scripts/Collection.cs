@@ -42,8 +42,7 @@ public class Collection : MonoBehaviour {
         if (count >= 4)
         {
             
-            PlayerStats stats = GetComponent<PlayerStats>();
-            stats.Health /= multiplier;
+           //aggiunge 4 powerUp, e bisogna finire la funzione con l input che usa i powerups
 
         }
     }
