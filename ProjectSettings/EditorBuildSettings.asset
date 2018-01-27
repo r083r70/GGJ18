@@ -5,6 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+<<<<<<< HEAD
   - enabled: 0
     path: Assets/Scenes/Multi/ServerScene.unity
     guid: 7cee50ddd3963824d9b48542d81b8f96
@@ -26,6 +27,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PiccioneNuovo.unity
     guid: 4a60127cc76dda1438ba8ef3122b9934
+=======
+  - enabled: 1
+    path: Assets/Scenes/StartGame.unity
+    guid: 4636d62dfe917fc47a17e0e76e1cbd59
+>>>>>>> 8fa784fc5505083480eb4e837bfdf886b6dd566f
   - enabled: 1
     path: Assets/Scenes/Particles.unity
     guid: 34201e503dd49a44d95dca41945845fd
