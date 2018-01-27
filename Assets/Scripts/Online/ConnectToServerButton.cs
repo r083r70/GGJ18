@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 public class ConnectToServerButton : NetworkBehaviour
 {
@@ -35,17 +36,8 @@ public class ConnectToServerButton : NetworkBehaviour
         {
             Debug.Log("0 ASSERT OnConnectedToServer");
             onlinemenu.errors.text = "OnConnectedToServer";
+            SceneManager.LoadScene("Particles");
         }
-    }
-
-    void OnConnectedToServer()
-    {
-        onlinemenu.errors.text = "OnConnectedToServer";
-    }
-
-    void OnFailedToConnect(NetworkConnectionError error)
-    {
-        Debug.Log("Failed to connect to server" + error);
     }
 
     public void setConnection(HostData con) {

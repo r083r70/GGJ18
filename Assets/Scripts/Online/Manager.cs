@@ -20,11 +20,12 @@ public class Manager : NetworkManager
         bool pa = Network.HavePublicAddress();
 
         NetworkConnectionError error = Network.InitializeServer(maxConnections, serverPort, !pa);
+        errors.text = "Initialize server " + Network.player.ipAddress + ":" + serverPort;
 
         if (error == NetworkConnectionError.NoError)
         {
-            MasterServer.RegisterHost(gameTypeName, "'s game");
-            OnRegisterHost();
+            //MasterServer.RegisterHost(gameTypeName, "'s game");
+            //OnRegisterHost();
         }
         else
         {
@@ -36,20 +37,21 @@ public class Manager : NetworkManager
     {
         Debug.Log(errors + " " + "NewServer");
         errors.text = "NewServer";
-        Network.Instantiate(playerPrefab, Vector3.zero, Quaternion.identity, 0);
+        Debug.Log("NewServer");
     }
 
     public override void OnServerConnect(NetworkConnection conn)
     {
         base.OnServerConnect(conn);
         errors.text = "ServerConnect";
-        SceneManager.LoadScene("PiccioneAnims", LoadSceneMode.Additive);
+        Debug.Log("ServerConnect");
+        
     }
 
     public override void OnClientConnect(NetworkConnection conn)
     {
         base.OnClientConnect(conn);
         errors.text = "ClientConnect";
-
+        Debug.Log("ClientConnect");
     }
 }

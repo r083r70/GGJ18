@@ -111,7 +111,16 @@ public class NetworkMenu : NetworkManager
 
     public override void OnServerConnect(NetworkConnection conn)
     {
+        base.OnServerConnect(conn);
         Debug.Log("1");
-        SceneManager.LoadScene("PiccioneAnims", LoadSceneMode.Additive);
+        errors.text = "OnServerConnect";
+        Debug.Log("OnServerConnect");
+    }
+
+    public override void OnClientConnect(NetworkConnection conn)
+    {
+        base.OnClientConnect(conn);
+        errors.text = "ClientConnect";
+        Debug.Log("ClientConnect");
     }
 }

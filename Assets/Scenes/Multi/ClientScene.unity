@@ -428,6 +428,7 @@ MonoBehaviour:
   - {fileID: 1598628415}
   - {fileID: 407012175}
   defaultIp: c0000000a80000002b000000a9000000
+  text: {fileID: 655047396}
 --- !u!4 &305029847
 Transform:
   m_ObjectHideFlags: 0

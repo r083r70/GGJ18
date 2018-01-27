@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class ClientConnection : NetworkBehaviour {
+public class OnConnection : NetworkBehaviour {
     public Text errors;
     private bool connecting;
 
@@ -15,9 +16,16 @@ public class ClientConnection : NetworkBehaviour {
         base.OnStartClient();
         if (isLocalPlayer)
         {
-            errors.text = "0 ASSERT OnConnectedToServer";
+            SceneManager.LoadScene("Particles");
         }
     }
 
-
+    public override void OnStartServer()
+    {
+        base.OnStartServer();
+        if (isServer)
+        {
+            SceneManager.LoadScene("Particles");
+        }
+    }
 }
