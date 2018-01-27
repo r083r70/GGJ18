@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Networking;
 
-public class NetworkMenu : MonoBehaviour {
+public class NetworkMenu : NetworkBehaviour {
     public int maxConnections = 2;
     public Text serverPort;
     public int defaultServerPort = 54224;
