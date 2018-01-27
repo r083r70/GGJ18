@@ -2520,7 +2520,7 @@ GameObject:
   - component: {fileID: 136806525225082070}
   m_Layer: 0
   m_Name: Piccione
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7598,7 +7598,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 114
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!95 &95078090903953542
 Animator:
@@ -7850,10 +7850,10 @@ MonoBehaviour:
   - {fileID: 1570749912230254}
   - {fileID: 1832463777443924}
   - {fileID: 1129726086342956}
-  initialSpeed: 20
+  initialSpeed: 5
   speed: 0
   minDeltaTimeDamage: 1
-  trigger: 0
+  maxPowerUpDuration: 7
 --- !u!136 &136806525225082070
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -8297,7 +8297,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 327041892
+  randomSeed: -247403278
   InitialModule:
     serializedVersion: 3
     enabled: 1

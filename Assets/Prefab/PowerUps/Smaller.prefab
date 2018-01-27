@@ -36,6 +36,7 @@ GameObject:
   - component: {fileID: 4201190894939704}
   - component: {fileID: 212643647327148484}
   - component: {fileID: 135535268568750936}
+  - component: {fileID: 114034608741239886}
   m_Layer: 0
   m_Name: Smaller
   m_TagString: PickUp
@@ -161,6 +162,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114034608741239886
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1838722188178992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ae509106b868d7429bb7b4f599ee88c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &135535268568750936
 SphereCollider:
   m_ObjectHideFlags: 1

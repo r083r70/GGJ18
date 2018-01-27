@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4534529907107860}
   - component: {fileID: 212452287418608262}
   - component: {fileID: 135015616546924440}
+  - component: {fileID: 114974731342403052}
   m_Layer: 0
   m_Name: Slowdown
   m_TagString: PickUp
@@ -161,6 +162,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114974731342403052
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1136815906625254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba0b711771c0bc040bc54daa73a86b47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &135015616546924440
 SphereCollider:
   m_ObjectHideFlags: 1
