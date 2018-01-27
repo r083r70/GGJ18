@@ -21,7 +21,7 @@ public class PowerUps : MonoBehaviour {
     }
 
     void OnTriggerEnter(Collider other) {
-        if (other.gameObject.CompareTag("Player")) {
+        if (other.gameObject.CompareTag("PickUp")) {
 
             switch (PowerUpsaTypeTake) {
                 case PowerUpsaType.slowDown:
