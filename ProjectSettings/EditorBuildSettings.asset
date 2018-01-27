@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/ServerScene.unity
     guid: 7cee50ddd3963824d9b48542d81b8f96
   - enabled: 1

@@ -7834,7 +7834,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forceModule: 10
   initialLife: 6
-  life: 0
+  lifes: 0
   skins:
   - {fileID: 1310794059650014}
   - {fileID: 1386323281973980}
@@ -7854,6 +7854,7 @@ MonoBehaviour:
   speed: 0
   minDeltaTimeDamage: 1
   maxPowerUpDuration: 7
+  hudLife: {fileID: 0}
 --- !u!136 &136806525225082070
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -8297,7 +8298,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -247403278
+  randomSeed: -1985124733
   InitialModule:
     serializedVersion: 3
     enabled: 1
