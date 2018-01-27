@@ -295,6 +295,7 @@ GameObject:
   m_Component:
   - component: {fileID: 319303259}
   - component: {fileID: 319303258}
+  - component: {fileID: 319303260}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -326,8 +327,30 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &319303260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 319303257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7da966dc5d1481f47b36e76cf07ed4d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUp:
+  - {fileID: 114840205939658850, guid: 1fe2a2de7150da04aa7877266e00d1e3, type: 2}
+  - {fileID: 114769502687383346, guid: 1c6c5999962ac3448a53c1081c5c4c20, type: 2}
+  - {fileID: 114974731342403052, guid: 8751fb3796fc9e24793ae692cddea75a, type: 2}
+  - {fileID: 114034608741239886, guid: 67a6f93ba8165c646aad7c2ddc2bd236, type: 2}
+  minDeltaSpawnTime: 10
+  piccione: {fileID: 41303516}
+  xDistanceSpawn: 30
+  minY: -1
+  maxY: 1
+  spawnProbability: 1
 --- !u!1 &814189974
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,7 +379,7 @@ Transform:
   - {fileID: 171239464}
   - {fileID: 283721486}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &889791516
 Prefab:
@@ -395,7 +418,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4765791840589954, guid: bc2e8cb84fa251b4695fd5adccfa12be, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bc2e8cb84fa251b4695fd5adccfa12be, type: 2}
@@ -661,7 +684,7 @@ Transform:
   - {fileID: 1202853020}
   - {fileID: 1035502673}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1759354741
 GameObject:

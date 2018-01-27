@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4042844452525328}
   - component: {fileID: 212360615247292028}
   - component: {fileID: 135878858049516594}
+  - component: {fileID: 114840205939658850}
   m_Layer: 0
   m_Name: Firewall
   m_TagString: PickUp
@@ -161,6 +162,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114840205939658850
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1164223113083420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb52f7b5c5ccbeb4caa0c26138adb572, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &135878858049516594
 SphereCollider:
   m_ObjectHideFlags: 1
