@@ -24,8 +24,6 @@ public class ConnectToServerIP : MonoBehaviour {
         }
         ip += ipFields[ipFields.Length - 1].text;
 
-        Debug.Log(ip);
-
         Network.Connect(ip, Manager.serverPort);
     }
 }
