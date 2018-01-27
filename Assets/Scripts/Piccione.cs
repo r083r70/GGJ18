@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
 
-public class Piccione : NetworkBehaviour
-{
+public class Piccione : NetworkBehaviour {
     private Rigidbody rb;
     private ParticleSystem ps;
 
@@ -23,11 +22,9 @@ public class Piccione : NetworkBehaviour
     public float minDeltaTimeDamage = 1;
     private float deltaTimeDamage;
 
-    public bool trigger;
-
     private int damageIndex;
 
-    private void Start () {
+    private void Start() {
         rb = GetComponent<Rigidbody>();
         ps = GetComponent<ParticleSystem>();
         life = initialLife;
@@ -35,19 +32,14 @@ public class Piccione : NetworkBehaviour
         damageIndex = 0;
     }
 
-    private void Update () {
+    private void Update() {
         rb.velocity = (Vector3.up * rb.velocity.y) + Vector3.right * initialSpeed;
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") || (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began))
             rb.AddForce(Vector3.up * forceModule, ForceMode.Impulse);
         deltaTimeDamage += Time.deltaTime;
-
-        if (trigger)
-            RemoveLife();
     }
 
     private void RemoveLife(int damage = 1) {
-        trigger = false;
-
         if (deltaTimeDamage < minDeltaTimeDamage || life <= 0)
             return;
         life -= damage;
@@ -71,10 +63,9 @@ public class Piccione : NetworkBehaviour
         ; // TODO
     }
 
-    public override void OnStartClient()
-    {
+    public override void OnStartClient() {
         base.OnStartClient();
-        
+
         Debug.Log("2");
         SceneManager.LoadScene("PiccioneNuovo", LoadSceneMode.Additive);
     }
