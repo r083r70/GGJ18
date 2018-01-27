@@ -1,50 +1,71 @@
 fileFormatVersion: 2
-guid: 8eb61e05d1343074a9c8d43b1f2f1a1d
-timeCreated: 1517042561
+guid: 40ec6387459b3fd40810fcb4b523b906
+timeCreated: 1517042607
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Bone017
-    100002: Bone018
-    100004: Bone019
-    100006: Bone020
-    100008: Bone021
-    100010: Bone022
-    100012: Bone023
-    100014: Bone024
-    100016: Bone025
-    100018: Bone026
-    100020: Bone027
-    100022: Bone028
-    100024: Bone029
-    100026: Bone030
-    100028: Bone031
-    100030: piccione003
-    100032: //RootNode
-    400000: Bone017
-    400002: Bone018
-    400004: Bone019
-    400006: Bone020
-    400008: Bone021
-    400010: Bone022
-    400012: Bone023
-    400014: Bone024
-    400016: Bone025
-    400018: Bone026
-    400020: Bone027
-    400022: Bone028
-    400024: Bone029
-    400026: Bone030
-    400028: Bone031
-    400030: piccione003
-    400032: //RootNode
-    2100000: 07 - Default
-    4300000: piccione003
+    100000: Object013
+    100002: Object019
+    100004: Object026
+    100006: Object028
+    100008: Object048
+    100010: Object051
+    100012: Object053
+    100014: Object055
+    100016: Object059
+    100018: Object069
+    100020: //RootNode
+    400000: Object013
+    400002: Object019
+    400004: Object026
+    400006: Object028
+    400008: Object048
+    400010: Object051
+    400012: Object053
+    400014: Object055
+    400016: Object059
+    400018: Object069
+    400020: //RootNode
+    2100000: 03 - Default
+    2300000: Object013
+    2300002: Object019
+    2300004: Object026
+    2300006: Object028
+    2300008: Object048
+    2300010: Object051
+    2300012: Object053
+    2300014: Object055
+    2300016: Object059
+    2300018: Object069
+    3300000: Object013
+    3300002: Object019
+    3300004: Object026
+    3300006: Object028
+    3300008: Object048
+    3300010: Object051
+    3300012: Object053
+    3300014: Object055
+    3300016: Object059
+    3300018: Object069
+    4300000: Object013
+    4300002: Object019
+    4300004: Object026
+    4300006: Object028
+    4300008: Object048
+    4300010: Object051
+    4300012: Object053
+    4300014: Object055
+    4300016: Object059
+    4300018: Object069
     7400000: Take 001
     9500000: //RootNode
-    13700000: piccione003
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 03 - Default
+    second: {fileID: 2100000, guid: 9b519c40aea58dd479411ab71cddced2, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
