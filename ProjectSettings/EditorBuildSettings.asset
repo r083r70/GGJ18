@@ -11,3 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: 6ab8cceb2d4f2fb49b3f62d7b54dc698
+  - enabled: 1
+    path: Assets/Scenes/PiccioneAnims.unity
+    guid: 54609e2e38469ff41ab61646eeb5dbc5
+  - enabled: 1
+    path: Assets/Scenes/PiccioneNuovo.unity
+    guid: 4a60127cc76dda1438ba8ef3122b9934

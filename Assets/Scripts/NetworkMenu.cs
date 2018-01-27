@@ -7,7 +7,7 @@ using UnityEngine.Networking;
 public class NetworkMenu : NetworkBehaviour {
     public int maxConnections = 2;
     public Text serverPort;
-    public int defaultServerPort = 54224;
+    public int defaultServerPort = 7777;
     public Text playerName;
     public Text numServers;
     public GameObject playerPrefab;

@@ -1,8 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.Networking;
 
-public class Piccione : MonoBehaviour {
+public class Piccione : NetworkBehaviour
+{
     private Rigidbody rb;
     private ParticleSystem ps;
 
@@ -67,7 +70,15 @@ public class Piccione : MonoBehaviour {
     private void Death() {
         ; // TODO
     }
-    
+
+    public override void OnStartClient()
+    {
+        base.OnStartClient();
+        
+        Debug.Log("2");
+        SceneManager.LoadScene("PiccioneNuovo", LoadSceneMode.Additive);
+    }
+
     private void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.CompareTag("Borders"))
             RemoveLife();
