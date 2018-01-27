@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 public class PowerUpSpawner : MonoBehaviour {
-    public PowerUps[] powerUp;
+    public PowerUp[] powerUp;
 
     public float minDeltaSpawnTime;
     private float deltaSpawnTime;
@@ -10,15 +10,13 @@ public class PowerUpSpawner : MonoBehaviour {
     public float xDistanceSpawn;
     public float minY, maxY;
 
-    public float spawnProbability;
-
-    private void Start () {
+    private void Start() {
         deltaSpawnTime = 0f;
-	}
+    }
 
-    private void Update () {
+    private void Update() {
         deltaSpawnTime += Time.deltaTime;
-        if (deltaSpawnTime >= minDeltaSpawnTime && Random.value <= spawnProbability)
+        if (deltaSpawnTime >= minDeltaSpawnTime)
             CreatePowerUp();
     }
 
@@ -26,5 +24,6 @@ public class PowerUpSpawner : MonoBehaviour {
         Vector3 initialPosition = piccione.position + Vector3.right * xDistanceSpawn;
         initialPosition.y = Random.Range(minY, maxY);
         Instantiate(powerUp[Random.Range(0, powerUp.Length)], initialPosition, Quaternion.identity);
+        deltaSpawnTime = 0f;
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Manager : NetworkManager
 {
-    public int serverPort = 7777;
+    public static int serverPort = 7777;
     public static string gameTypeName = "GGJ18";
     public Text errors;
 
@@ -23,8 +23,8 @@ public class Manager : NetworkManager
 
         if (error == NetworkConnectionError.NoError)
         {
-            MasterServer.RegisterHost(gameTypeName, "'s game");
-            OnRegisterHost();
+            //MasterServer.RegisterHost(gameTypeName, "'s game");
+            //OnRegisterHost();
         }
         else
         {
