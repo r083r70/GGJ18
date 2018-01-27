@@ -1,42 +1,49 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.Networking;
 
-public class ConnectToServerButton : MonoBehaviour {
+public class ConnectToServerButton : NetworkBehaviour
+{
 	public NetworkMenu onlinemenu;
 	public Text serverIP;
-	public Text serverPort;
     public Text gameName;
 
     private HostData connection;
-
-	void Start() {
-		if(serverIP!= null && serverPort!=null) {
-			serverIP.text = onlinemenu.serverIP;
-			serverPort.text = ""+onlinemenu.serverPort;
-		}
-	}
 	
 	// Use this for initialization
 	public void OnClick () {
 		if(connection != null) {
 			Network.Connect (connection);
-			onlinemenu.errors.text = "connecting...";
+			onlinemenu.errors.text = "host data connecting...";
 		}
-		else if(serverIP!= null && serverPort!=null) {
-			Network.Connect(serverIP.text, int.Parse(serverPort.text));
-			onlinemenu.errors.text = "connecting...";
+		else if(serverIP!= null && onlinemenu.serverPort!=null) {
+            //string serverIP = this.serverIP.text;
+            //int serverPort = int.Parse(this.onlinemenu.serverPort.text);
+            string serverIP = "localhost";
+            int serverPort = onlinemenu.defaultServerPort;
+            onlinemenu.errors.text = "port" + onlinemenu.serverPort.text;
+			Network.Connect(serverIP, serverPort);
+			Debug.Log( "connecting to s" + serverIP + ":" + serverPort + " ...");
 		} else {
 			print ("Lo script non sa a chi connettersi");
 		}
 	}
-	
-	void OnConnectedToServer() {
-        //Network.isMessageQueueRunning = false;
-        onlinemenu.errors.text = "connected to " + connection.gameName;
+    public override void OnStartClient()
+    {
+        if (isLocalPlayer)
+        {
+            Debug.Log("0 ASSERT OnConnectedToServer");
+            onlinemenu.errors.text = "OnConnectedToServer";
+        }
     }
-	
-	public void setConnection(HostData con) {
+
+    void OnFailedToConnect(NetworkConnectionError error)
+    {
+        Debug.Log("Failed to connect to server" + error);
+    }
+
+    public void setConnection(HostData con) {
 		connection = con;
         gameName.text = con.gameName;
 
