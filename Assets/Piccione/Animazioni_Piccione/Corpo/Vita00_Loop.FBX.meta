@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 68be5c5a2f6c4d640aecc2df33de1215
-timeCreated: 1517042561
+guid: e3360fe3f007c144d84091b3991552f1
+timeCreated: 1517044917
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -20,7 +20,7 @@ ModelImporter:
     100024: Bone014
     100026: Bone015
     100028: Bone016
-    100030: piccione002
+    100030: piccione
     100032: //RootNode
     400000: Bone002
     400002: Bone003
@@ -37,14 +37,43 @@ ModelImporter:
     400024: Bone014
     400026: Bone015
     400028: Bone016
-    400030: piccione002
+    400030: piccione
     400032: //RootNode
-    2100000: 03 - Default
-    4300000: piccione002
+    2100000: 'Material #100'
+    2100002: 'Material #148'
+    2100004: 'Material #75'
+    2100006: 'Material #87'
+    2100008: 'Material #136'
+    4300000: piccione
     7400000: Take 001
     9500000: //RootNode
-    13700000: piccione002
-  externalObjects: {}
+    13700000: piccione
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #100'
+    second: {fileID: 2100000, guid: 9b519c40aea58dd479411ab71cddced2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #136'
+    second: {fileID: 2100000, guid: 9b519c40aea58dd479411ab71cddced2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #148'
+    second: {fileID: 2100000, guid: 9b519c40aea58dd479411ab71cddced2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #75'
+    second: {fileID: 2100000, guid: 9b519c40aea58dd479411ab71cddced2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #87'
+    second: {fileID: 2100000, guid: 9b519c40aea58dd479411ab71cddced2, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -70,7 +99,35 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 90
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 1
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []

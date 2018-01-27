@@ -1,66 +1,71 @@
 fileFormatVersion: 2
-guid: ba409f2bd71113348a45983950426655
+guid: 42bc1dc296cde3744906e3105049e0d6
 timeCreated: 1517042607
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Object012
-    100002: Object016
-    100004: Object018
-    100006: Object037
-    100008: Object039
-    100010: Object041
-    100012: Object044
-    100014: Object057
-    100016: Object062
-    100018: Object064
+    100000: Object071
+    100002: Object073
+    100004: Object076
+    100006: Object084
+    100008: Object093
+    100010: Object094
+    100012: Object097
+    100014: Object116
+    100016: Object128
+    100018: Object130
     100020: //RootNode
-    400000: Object012
-    400002: Object016
-    400004: Object018
-    400006: Object037
-    400008: Object039
-    400010: Object041
-    400012: Object044
-    400014: Object057
-    400016: Object062
-    400018: Object064
+    400000: Object071
+    400002: Object073
+    400004: Object076
+    400006: Object084
+    400008: Object093
+    400010: Object094
+    400012: Object097
+    400014: Object116
+    400016: Object128
+    400018: Object130
     400020: //RootNode
     2100000: 03 - Default
-    2300000: Object012
-    2300002: Object016
-    2300004: Object018
-    2300006: Object037
-    2300008: Object039
-    2300010: Object041
-    2300012: Object044
-    2300014: Object057
-    2300016: Object062
-    2300018: Object064
-    3300000: Object012
-    3300002: Object016
-    3300004: Object018
-    3300006: Object037
-    3300008: Object039
-    3300010: Object041
-    3300012: Object044
-    3300014: Object057
-    3300016: Object062
-    3300018: Object064
-    4300000: Object012
-    4300002: Object016
-    4300004: Object018
-    4300006: Object037
-    4300008: Object039
-    4300010: Object041
-    4300012: Object044
-    4300014: Object057
-    4300016: Object062
-    4300018: Object064
+    2300000: Object071
+    2300002: Object073
+    2300004: Object076
+    2300006: Object084
+    2300008: Object093
+    2300010: Object094
+    2300012: Object097
+    2300014: Object116
+    2300016: Object128
+    2300018: Object130
+    3300000: Object071
+    3300002: Object073
+    3300004: Object076
+    3300006: Object084
+    3300008: Object093
+    3300010: Object094
+    3300012: Object097
+    3300014: Object116
+    3300016: Object128
+    3300018: Object130
+    4300000: Object071
+    4300002: Object073
+    4300004: Object076
+    4300006: Object084
+    4300008: Object093
+    4300010: Object094
+    4300012: Object097
+    4300014: Object116
+    4300016: Object128
+    4300018: Object130
     7400000: Take 001
     9500000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 03 - Default
+    second: {fileID: 2100000, guid: 9b519c40aea58dd479411ab71cddced2, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

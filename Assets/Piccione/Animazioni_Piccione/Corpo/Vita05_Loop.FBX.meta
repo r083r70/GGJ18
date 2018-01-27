@@ -1,79 +1,54 @@
 fileFormatVersion: 2
-guid: 7277414cc7581664192a4a4a9f8031d3
-timeCreated: 1517034622
+guid: e45f3855bbfafb9418c53969ed72a55a
+timeCreated: 1517042562
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: Bone002
-    100002: Bone003
-    100004: Bone004
-    100006: Bone005
-    100008: Bone006
-    100010: Bone007
-    100012: Bone008
-    100014: Bone009
-    100016: Bone010
-    100018: Bone011
-    100020: Bone012
-    100022: Bone013
-    100024: Bone014
-    100026: Bone015
-    100028: Bone016
-    100030: //RootNode
-    100032: piccione
-    400000: Bone002
-    400002: Bone003
-    400004: Bone004
-    400006: Bone005
-    400008: Bone006
-    400010: Bone007
-    400012: Bone008
-    400014: Bone009
-    400016: Bone010
-    400018: Bone011
-    400020: Bone012
-    400022: Bone013
-    400024: Bone014
-    400026: Bone015
-    400028: Bone016
-    400030: //RootNode
-    400032: piccione
-    2100000: 'Material #100'
-    2100002: 'Material #148'
-    2100004: 'Material #75'
-    2100006: 'Material #87'
-    2100008: 'Material #136'
-    4300000: piccione
+    100000: Bone062
+    100002: Bone063
+    100004: Bone064
+    100006: Bone065
+    100008: Bone066
+    100010: Bone067
+    100012: Bone068
+    100014: Bone069
+    100016: Bone070
+    100018: Bone071
+    100020: Bone072
+    100022: Bone073
+    100024: Bone074
+    100026: Bone075
+    100028: Bone076
+    100030: piccione006
+    100032: //RootNode
+    400000: Bone062
+    400002: Bone063
+    400004: Bone064
+    400006: Bone065
+    400008: Bone066
+    400010: Bone067
+    400012: Bone068
+    400014: Bone069
+    400016: Bone070
+    400018: Bone071
+    400020: Bone072
+    400022: Bone073
+    400024: Bone074
+    400026: Bone075
+    400028: Bone076
+    400030: piccione006
+    400032: //RootNode
+    2100000: 07 - Default
+    4300000: piccione006
     7400000: Take 001
     9500000: //RootNode
-    11100000: //RootNode
-    13700000: piccione
+    13700000: piccione006
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: 'Material #100'
-    second: {fileID: 2100000, guid: 9b519c40aea58dd479411ab71cddced2, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 'Material #136'
-    second: {fileID: 2100000, guid: 9b519c40aea58dd479411ab71cddced2, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 'Material #148'
-    second: {fileID: 2100000, guid: 9b519c40aea58dd479411ab71cddced2, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 'Material #75'
-    second: {fileID: 2100000, guid: 9b519c40aea58dd479411ab71cddced2, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: 'Material #87'
+      name: 07 - Default
     second: {fileID: 2100000, guid: 9b519c40aea58dd479411ab71cddced2, type: 2}
   materials:
     importMaterials: 1
@@ -93,11 +68,11 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
-    animationWrapMode: 2
+    animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations:
@@ -110,7 +85,7 @@ ModelImporter:
       orientationOffsetY: 0
       level: 0
       cycleOffset: 1
-      loop: 1
+      loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
       loopBlend: 0
@@ -173,7 +148,7 @@ ModelImporter:
     rootMotionBoneName: 
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
-    hasExtraRoot: 1
+    hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
