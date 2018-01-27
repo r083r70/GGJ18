@@ -23,8 +23,8 @@ public class Manager : NetworkManager
 
         if (error == NetworkConnectionError.NoError)
         {
-            MasterServer.RegisterHost(gameTypeName, "'s game");
-            OnRegisterHost();
+            //MasterServer.RegisterHost(gameTypeName, "'s game");
+            //OnRegisterHost();
         }
         else
         {

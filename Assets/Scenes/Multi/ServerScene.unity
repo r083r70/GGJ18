@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -244,7 +244,7 @@ MonoBehaviour:
   m_ScriptCRCCheck: 1
   m_MaxDelay: 0.01
   m_LogLevel: 2
-  m_PlayerPrefab: {fileID: 1354897260589660, guid: c03604f32fcff704f949d159c0c990bf,
+  m_PlayerPrefab: {fileID: 1924423847233054, guid: bc2e8cb84fa251b4695fd5adccfa12be,
     type: 2}
   m_AutoCreatePlayer: 0
   m_PlayerSpawnMethod: 0
@@ -306,7 +306,6 @@ MonoBehaviour:
   matchSize: 4
   isNetworkActive: 0
   matchMaker: {fileID: 0}
-  serverPort: 7777
   errors: {fileID: 1965448154}
 --- !u!4 &1088791423
 Transform:

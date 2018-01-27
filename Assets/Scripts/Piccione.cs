@@ -31,7 +31,7 @@ public class Piccione : NetworkBehaviour {
     private bool noDowns;
 
     public HudLife hudLife;
-
+    
     private void Start() {
         rb = GetComponent<Rigidbody>();
         tr = GetComponent<Transform>();
@@ -131,5 +131,13 @@ public class Piccione : NetworkBehaviour {
 
         invincible = noDowns = false;
         speed = initialSpeed;
+    }
+
+    private void OnDisable() {
+        Invoke("Stupid", 1);
+    }
+
+    private void Stupid() {
+        gameObject.SetActive(true);
     }
 }

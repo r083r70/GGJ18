@@ -7,11 +7,13 @@ public class ScrollaSchermo : MonoBehaviour {
     public Transform bordersOne;
     public Transform bordersTwo;
 
+    public Mesh mesh;
+
     private float distance;
 
     private void Start() {
         cam = Camera.main.GetComponent<Transform>();
-        distance = bordersOne.localScale.x;
+        distance = mesh.bounds.size.x * bordersOne.localScale.x;
         bordersOne.position = Vector3.zero;
         bordersTwo.position = bordersOne.position + Vector3.right * distance;
     }
