@@ -38,6 +38,11 @@ public class ConnectToServerButton : NetworkBehaviour
         }
     }
 
+    void OnConnectedToServer()
+    {
+        onlinemenu.errors.text = "OnConnectedToServer";
+    }
+
     void OnFailedToConnect(NetworkConnectionError error)
     {
         Debug.Log("Failed to connect to server" + error);

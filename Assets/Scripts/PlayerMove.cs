@@ -9,4 +9,6 @@ public class PlayerMove : MonoBehaviour
 
         transform.Translate(x, 0, z);
     }
+
+
 }

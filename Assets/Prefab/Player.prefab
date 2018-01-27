@@ -22,10 +22,10 @@ GameObject:
   - component: {fileID: 33066694849754346}
   - component: {fileID: 65734279205769668}
   - component: {fileID: 23545473125879640}
-  - component: {fileID: 114268862941323580}
   - component: {fileID: 54228554140463078}
   - component: {fileID: 114439363477016128}
   - component: {fileID: 114732602942970790}
+  - component: {fileID: 114539920857689980}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -114,18 +114,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114268862941323580
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1354897260589660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0932ae509943704bb691fac1ba9b8dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: 100
 --- !u!114 &114439363477016128
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -157,7 +145,25 @@ MonoBehaviour:
     i14: 144
     i15: 191
   m_ServerOnly: 0
-  m_LocalPlayerAuthority: 0
+  m_LocalPlayerAuthority: 1
+--- !u!114 &114539920857689980
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1354897260589660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d33d9d9d47acfbb49b19d333857517f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceModule: 0
+  initialLife: 6
+  skins: []
+  feavers: []
+  initialSpeed: 50
+  minDeltaTimeDamage: 1
+  trigger: 0
 --- !u!114 &114732602942970790
 MonoBehaviour:
   m_ObjectHideFlags: 1

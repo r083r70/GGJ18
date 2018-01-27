@@ -1076,7 +1076,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxConnections: 2
   serverPort: {fileID: 1169957762}
-  defaultServerPort: 54224
+  defaultServerPort: 7777
   playerName: {fileID: 1674644967}
   numServers: {fileID: 1754955832}
   playerPrefab: {fileID: 1354897260589660, guid: c03604f32fcff704f949d159c0c990bf,
