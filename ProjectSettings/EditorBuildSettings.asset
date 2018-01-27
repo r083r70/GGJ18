@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Multi/ServerScene.unity
     guid: 7cee50ddd3963824d9b48542d81b8f96
   - enabled: 1
+    path: Assets/Scenes/StartGame.unity
+    guid: 4636d62dfe917fc47a17e0e76e1cbd59
+  - enabled: 1
     path: Assets/Scenes/Multi/ClientScene.unity
     guid: f4bdbe468f782f249ab5dfdab611c687
   - enabled: 1
