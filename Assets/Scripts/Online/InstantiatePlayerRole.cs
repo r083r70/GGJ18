@@ -8,6 +8,7 @@ public class InstantiatePlayerRole : Photon.PunBehaviour {
     public GameObject pegeoutPrefabHUD;
     public Vector3 pegeoutInitPosition;
 
+    private GameObject pegeoutHUD;
 
     // Update is called once per frame
     public override void OnJoinedRoom() {
@@ -17,17 +18,17 @@ public class InstantiatePlayerRole : Photon.PunBehaviour {
 
         if (PhotonNetwork.countOfPlayers == 1)
         {
-            GameObject pegeoutHUD = Instantiate(pegeoutPrefabHUD, pegeoutPrefabHUD.transform, false);
-            pegeoutHUD.transform.parent = canvas.transform;
-            pegeoutHUD.transform.position = Vector3.zero;
+            pegeoutHUD = Instantiate(pegeoutPrefabHUD, pegeoutPrefabHUD.transform, true);
+            pegeoutHUD.transform.SetParent(canvas.transform, false);
+
 
             PhotonNetwork.Instantiate(pegeout, pegeoutInitPosition, Quaternion.identity, 0);
         }
         else
         {
-            GameObject hacker = Instantiate(hackerPrefab, Vector3.zero, Quaternion.identity);
+            GameObject hacker = Instantiate(hackerPrefab, hackerPrefab.transform, true);
+            hacker.transform.SetParent(canvas.transform, false);
             Camera.main.fieldOfView = 115f;
-            hacker.transform.parent = canvas.transform;
         }
 
         
