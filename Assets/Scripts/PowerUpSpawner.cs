@@ -15,15 +15,26 @@ public class PowerUpSpawner : MonoBehaviour {
     }
 
     private void Update() {
+        if (piccione == null)
+        {
+            return;
+        }
+
         deltaSpawnTime += Time.deltaTime;
         if (deltaSpawnTime >= minDeltaSpawnTime)
             CreatePowerUp();
     }
+
 
     private void CreatePowerUp() {
         Vector3 initialPosition = piccione.position + Vector3.right * xDistanceSpawn;
         initialPosition.y = Random.Range(minY, maxY);
         Instantiate(powerUp[Random.Range(0, powerUp.Length)], initialPosition, Quaternion.identity);
         deltaSpawnTime = 0f;
+    }
+
+    public void setTarget(Transform transform)
+    {
+        piccione = transform;
     }
 }

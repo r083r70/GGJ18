@@ -10,14 +10,18 @@ public class CameraManager : MonoBehaviour {
 
     private float offset;
 
-    private void Start() {
-        tr = GetComponent<Transform>();
+    public void setTarget(Transform target) {
+        tr = target;
         offset = tr.position.x - piccione.position.x;
         y = tr.position.y;
         z = tr.position.z;
     }
 
     void LateUpdate() {
+        if (tr == null)
+        {
+            return;
+        }
         tr.position = new Vector3(piccione.position.x + offset, y, z);
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
 
-public class Piccione : NetworkBehaviour {
+public class Piccione : MonoBehaviour {
     private Rigidbody rb;
     private Transform tr;
     private ParticleSystem ps;
@@ -84,13 +84,6 @@ public class Piccione : NetworkBehaviour {
 
     private void Death() {
         ; // TODO
-    }
-
-    public override void OnStartClient() {
-        base.OnStartClient();
-
-        Debug.Log("2");
-        SceneManager.LoadScene("PiccioneNuovo", LoadSceneMode.Additive);
     }
 
     private void OnCollisionEnter(Collision collision) {
