@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
 
-public class Piccione : MonoBehaviour {
+public class Piccione : Photon.MonoBehaviour {
     private Rigidbody rb;
     private Transform tr;
     private ParticleSystem ps;
@@ -39,9 +39,20 @@ public class Piccione : MonoBehaviour {
         damageIndex = -1;
         speed = initialSpeed;
         invincible = noDowns = false;
+
+        if (!photonView.isMine)
+        {
+            Rigidbody attachedRigidbody = GetComponent<Rigidbody>();
+            if (attachedRigidbody != null)
+            {
+                attachedRigidbody.isKinematic = true;
+            }
+        }
     }
 
     private void Update() {
+        if (!photonView.isMine) return;
+
         // speed
         rb.velocity = (Vector3.up * rb.velocity.y) + Vector3.right * speed;
 
