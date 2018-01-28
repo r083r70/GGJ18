@@ -10,6 +10,7 @@ public class Piccione : NetworkBehaviour {
     private ParticleSystem ps;
 
     public float forceModule;
+    public float maxVerticalSpeed;
 
     public int initialLife = 6;
     public int lifes;
@@ -31,7 +32,7 @@ public class Piccione : NetworkBehaviour {
     private bool noDowns;
 
     public HudLife hudLife;
-    
+
     private void Start() {
         rb = GetComponent<Rigidbody>();
         tr = GetComponent<Transform>();
@@ -51,8 +52,11 @@ public class Piccione : NetworkBehaviour {
         if (Input.GetButtonDown("Jump") || (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began))
             rb.AddForce(Vector3.up * forceModule, ForceMode.Impulse);
 
+        if (rb.velocity.y > maxVerticalSpeed)
+            rb.velocity = new Vector3(rb.velocity.x, maxVerticalSpeed, rb.velocity.z);
+
         // feavers
-        deltaTimeDamage += Time.deltaTime;
+            deltaTimeDamage += Time.deltaTime;
         if (deltaTimeDamage > minDeltaTimeDamage && damageIndex >= 0)
             feavers[damageIndex].SetActive(false);
 
@@ -65,7 +69,7 @@ public class Piccione : NetworkBehaviour {
     private void RemoveLife() {
         if (deltaTimeDamage < minDeltaTimeDamage || lifes <= 0 || invincible)
             return;
-        lifes --;
+        lifes--;
 
         hudLife.ChangeImage(lifes);
 
@@ -96,6 +100,13 @@ public class Piccione : NetworkBehaviour {
     private void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.CompareTag("Borders"))
             RemoveLife();
+        else if (collision.gameObject.CompareTag("Obstacle"))
+            if (invincible)
+                collision.gameObject.GetComponent<Obstacle>().Explode();
+            else {
+                RemoveLife();
+                collision.gameObject.GetComponent<SphereCollider>().isTrigger = true;
+            }
     }
 
     //************************** POWER UPS **************************//
@@ -124,7 +135,7 @@ public class Piccione : NetworkBehaviour {
 
     private void ResetPowers() {
         Vector3 newPos = tr.position;
-        if(tr.localScale.x < 1)
+        if (tr.localScale.x < 1)
             newPos.y *= 2f;
         tr.localScale = Vector3.one;
         tr.position = newPos;

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Borders
   - PickUp
+  - Obstacle
   layers:
   - Default
   - TransparentFX

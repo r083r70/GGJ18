@@ -1,19 +1,34 @@
 fileFormatVersion: 2
-guid: d7c89a756add63543a2c5db5581e9ccd
-timeCreated: 1517094112
+guid: ddacfffc0cd3fda49b19b6805ba76c4d
+timeCreated: 1517098969
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
+    100000: Object139
+    100002: Object252
+    100004: Object253
+    100006: //RootNode
+    400000: Object139
+    400002: Object252
+    400004: Object253
+    400006: //RootNode
     2100000: 03 - Default
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: GeoSphere001
-    7400000: Take 001
-    9500000: //RootNode
-  externalObjects: {}
+    2300000: Object139
+    2300002: Object252
+    2300004: Object253
+    3300000: Object139
+    3300002: Object252
+    3300004: Object253
+    4300000: Object139
+    4300002: Object252
+    4300004: Object253
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 03 - Default
+    second: {fileID: 2100000, guid: f9890bfc5849f2d429317efabbb81350, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -39,35 +54,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Take 001
-      takeName: Take 001
-      firstFrame: 0
-      lastFrame: 90
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 1
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -115,7 +102,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
