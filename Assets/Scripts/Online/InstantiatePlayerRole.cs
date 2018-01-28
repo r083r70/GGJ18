@@ -19,9 +19,9 @@ public class InstantiatePlayerRole : Photon.PunBehaviour {
         if (PhotonNetwork.countOfPlayers == 1) {
             var k = PhotonNetwork.Instantiate(pegeout, pegeoutInitPosition, Quaternion.Euler(0, 90, 0), 0);
 
-            pegeoutHUD = Instantiate(pegeoutPrefabHUD, pegeoutPrefabHUD.transform, true);
-            pegeoutHUD.transform.SetParent(canvas.transform, false);
-            pegeoutHUD.GetComponentInChildren<HudPowerUp>().piccione = k.GetComponent<Piccione>();
+            //pegeoutHUD = Instantiate(pegeoutPrefabHUD, pegeoutPrefabHUD.transform, true);
+            //pegeoutHUD.transform.SetParent(canvas.transform, false);
+            //pegeoutHUD.GetComponentInChildren<HudPowerUp>().piccione = k.GetComponent<Piccione>();
         } else {
             GameObject hacker = Instantiate(hackerPrefab, hackerPrefab.transform, true);
             hacker.transform.SetParent(canvas.transform, false);
