@@ -29,8 +29,6 @@ public class Piccione : MonoBehaviour {
     private int damageIndex;
     private bool invincible;
     private bool noDowns;
-
-    public HudLife hudLife;
     
     private void Start() {
         rb = GetComponent<Rigidbody>();
@@ -67,7 +65,7 @@ public class Piccione : MonoBehaviour {
             return;
         lifes --;
 
-        hudLife.ChangeImage(lifes);
+        HudLife.getInstance().ChangeImage(lifes);
 
         foreach (GameObject skin in skins)
             skin.SetActive(false);

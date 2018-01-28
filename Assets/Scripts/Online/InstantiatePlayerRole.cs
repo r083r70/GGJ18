@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class InstantiatePlayerRole : Photon.PunBehaviour {
     public string pegeout = "piccione";
+    public Vector3 pegeoutInitPosition;
 
 
     // Update is called once per frame
@@ -14,7 +15,7 @@ public class InstantiatePlayerRole : Photon.PunBehaviour {
 
         if(PhotonNetwork.countOfPlayers == 1)
         {
-            GameObject piccione = PhotonNetwork.Instantiate(pegeout, new Vector3(0, 0, 0), Quaternion.identity, 0);
+            GameObject piccione = PhotonNetwork.Instantiate(pegeout, pegeoutInitPosition, Quaternion.identity, 0);
             CameraManager cameraManager = Camera.main.GetComponent<CameraManager>();
             cameraManager.setTarget(piccione.transform);
             PowerUpSpawner powerUpSpawner = Camera.main.GetComponent<PowerUpSpawner>();

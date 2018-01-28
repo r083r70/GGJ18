@@ -383,6 +383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pegeout: piccione
+  pegeoutInitPosition: {x: -6.11, y: -8.37, z: 0}
 --- !u!1 &544253618
 GameObject:
   m_ObjectHideFlags: 0

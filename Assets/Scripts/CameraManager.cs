@@ -11,7 +11,8 @@ public class CameraManager : MonoBehaviour {
     private float offset;
 
     public void setTarget(Transform target) {
-        tr = target;
+        piccione = target;
+        tr = GetComponent<Transform>();
         offset = tr.position.x - piccione.position.x;
         y = tr.position.y;
         z = tr.position.z;
