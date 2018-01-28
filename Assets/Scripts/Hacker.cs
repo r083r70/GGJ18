@@ -12,7 +12,7 @@ public class Hacker : Photon.MonoBehaviour
         {
             Debug.Log("Hacker obstacle");
             PhotonNetwork.Instantiate(obstaclePrefab.name, InputToEvent.inputHitPos.x * Vector3.right +
-                InputToEvent.inputHitPos.y * Vector3.up, Quaternion.identity, 0);
+                InputToEvent.inputHitPos.y * Vector3.up + Vector3.forward * -2.43f, Quaternion.identity, 0);
         }
     }
 	
