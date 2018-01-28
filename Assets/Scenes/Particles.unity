@@ -216,7 +216,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 29a1187963b5de241927c9c3b8dc9f94, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 29a1187963b5de241927c9c3b8dc9f94, type: 3}
       propertyPath: m_LocalScale.y
@@ -323,7 +323,6 @@ GameObject:
   - component: {fileID: 319303259}
   - component: {fileID: 319303258}
   - component: {fileID: 319303261}
-  - component: {fileID: 319303262}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -371,19 +370,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AutoConnect: 1
   Version: 1
---- !u!114 &319303262
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 319303257}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17242c1187ec680448217b3580f5e278, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pegeout: piccione
-  pegeoutInitPosition: {x: -6.11, y: -8.37, z: 0}
 --- !u!1 &544253618
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,6 +735,48 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 29a1187963b5de241927c9c3b8dc9f94, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &1433358523
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1433358525}
+  - component: {fileID: 1433358524}
+  m_Layer: 0
+  m_Name: InstantiateRole
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1433358524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1433358523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17242c1187ec680448217b3580f5e278, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pegeout: piccione
+  pegeoutInitPosition: {x: -6.11, y: -8.37, z: 0}
+--- !u!4 &1433358525
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1433358523}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1557526941
 GameObject:
   m_ObjectHideFlags: 0
@@ -934,7 +962,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 58.6
   orthographic: 0
   orthographic size: 5
   m_Depth: -1

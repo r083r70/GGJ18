@@ -13,19 +13,32 @@ public class InstantiatePlayerRole : Photon.PunBehaviour {
 
         Debug.Log("OnJoinedLobby");
 
-        if(PhotonNetwork.countOfPlayers == 1)
+        if (PhotonNetwork.countOfPlayers == 1)
         {
-            GameObject piccione = PhotonNetwork.Instantiate(pegeout, pegeoutInitPosition, Quaternion.identity, 0);
-            CameraManager cameraManager = Camera.main.GetComponent<CameraManager>();
-            cameraManager.setTarget(piccione.transform);
-            PowerUpSpawner powerUpSpawner = Camera.main.GetComponent<PowerUpSpawner>();
-            powerUpSpawner.setTarget(piccione.transform);
+            PhotonNetwork.Instantiate(pegeout, pegeoutInitPosition, Quaternion.identity, 0);
 
         }
-        else if (PhotonNetwork.countOfPlayers == 2)
+        else
         {
+            Camera.main.fieldOfView = 115f;
             Debug.Log("Rompicoglioni");
         }
 
+        
+    }
+
+    private void Update()
+    {
+        GameObject piccione = GameObject.FindGameObjectWithTag("Player");
+        if (piccione == null)
+        {
+            return;
+        }
+        CameraManager cameraManager = Camera.main.GetComponent<CameraManager>();
+        cameraManager.setTarget(piccione.transform);
+        PowerUpSpawner powerUpSpawner = Camera.main.GetComponent<PowerUpSpawner>();
+        powerUpSpawner.setTarget(piccione.transform);
+
+        Destroy(gameObject);
     }
 }
