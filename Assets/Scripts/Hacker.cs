@@ -11,7 +11,8 @@ public class Hacker : Photon.MonoBehaviour
         if (Input.touchCount > 0 || Input.GetMouseButtonDown(0))
         {
             Debug.Log("Hacker obstacle");
-            PhotonNetwork.Instantiate(obstaclePrefab.name, InputToEvent.inputHitPos + new Vector3(0, 5f, 0), Quaternion.identity, 0);
+            PhotonNetwork.Instantiate(obstaclePrefab.name, InputToEvent.inputHitPos.x * Vector3.right +
+                InputToEvent.inputHitPos.y * Vector3.up, Quaternion.identity, 0);
         }
     }
 	

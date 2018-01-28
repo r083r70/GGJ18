@@ -93,8 +93,6 @@ public class HudManager : MonoBehaviour {
         float offsetY = piccione.GetComponent<Transform>().position.y - initialY;
         GetComponent<Transform>().localPosition = initialPos + Vector3.down * offsetY;
 
-        Debug.Log(initialPos);
-
         if (Input.GetButtonDown("Fire1") && power1_b) {
             Change(1, false);
             piccione.HighQuality();

@@ -25,7 +25,7 @@ public class InstantiatePlayerRole : Photon.PunBehaviour {
         } else {
             GameObject hacker = Instantiate(hackerPrefab, hackerPrefab.transform, true);
             hacker.transform.SetParent(canvas.transform, false);
-            Camera.main.fieldOfView = 115f;
+            //Camera.main.fieldOfView = 115f;
         }
 
 
