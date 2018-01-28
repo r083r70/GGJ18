@@ -25,7 +25,7 @@ public class PowerUps : MonoBehaviour {
 
             switch (PowerUpsaTypeTake) {
                 case PowerUpsaType.slowDown:
-                    piccio.speed /= multiplier;
+                    //piccio.speed /= multiplier;
                     break;
                 case PowerUpsaType.fireWall:
                     break;

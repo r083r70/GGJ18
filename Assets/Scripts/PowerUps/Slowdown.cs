@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Slowdown : PowerUp {
-    protected override void PowerUpEffect(Piccione p) {
+    public override void PowerUpEffect(Piccione p) {
         p.Slowdown();
+    }
+
+    protected override void AddToHUD() {
+        HudPowerUp.instance.AddPowUp(3, this);
     }
 }
