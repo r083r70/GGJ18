@@ -19,7 +19,12 @@ public class Piccione : NetworkBehaviour {
     public GameObject[] feavers;
 
     public float initialSpeed = 50f;
-    public float speed;
+    private float speed;
+    public float speedMax = 100f;
+
+    public float speedIncrementation;
+    public float fixedDeltaTimeIncrementation;
+    private float deltaTimeIncrementation;
 
     public float minDeltaTimeDamage = 1;
     private float deltaTimeDamage;
@@ -38,6 +43,7 @@ public class Piccione : NetworkBehaviour {
         tr = GetComponent<Transform>();
         ps = GetComponent<ParticleSystem>();
         lifes = initialLife;
+        deltaTimeIncrementation = 0f;
         deltaTimeDamage = 0f;
         damageIndex = -1;
         speed = initialSpeed;
@@ -47,6 +53,13 @@ public class Piccione : NetworkBehaviour {
     private void Update() {
         // speed
         rb.velocity = (Vector3.up * rb.velocity.y) + Vector3.right * speed;
+        deltaTimeIncrementation += Time.deltaTime;
+        if (deltaTimeIncrementation > fixedDeltaTimeIncrementation && speed >= initialSpeed && speed < speedMax) {
+            speed *= speedIncrementation;
+            initialSpeed = speed;
+            deltaTimeIncrementation = 0f;
+        }
+
 
         // jump
         if (Input.GetButtonDown("Jump") || (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began))
@@ -56,7 +69,7 @@ public class Piccione : NetworkBehaviour {
             rb.velocity = new Vector3(rb.velocity.x, maxVerticalSpeed, rb.velocity.z);
 
         // feavers
-            deltaTimeDamage += Time.deltaTime;
+        deltaTimeDamage += Time.deltaTime;
         if (deltaTimeDamage > minDeltaTimeDamage && damageIndex >= 0)
             feavers[damageIndex].SetActive(false);
 
@@ -109,6 +122,12 @@ public class Piccione : NetworkBehaviour {
             }
     }
 
+    private void OnTriggerEnter(Collider other) {
+        if (!other.gameObject.CompareTag("Borders"))
+            if (tr.position.x - 15 > other.gameObject.GetComponent<Transform>().position.x)
+                Destroy(other.gameObject);
+    }
+
     //************************** POWER UPS **************************//
     public void Smaller() {
         Vector3 newPos = tr.position;
@@ -129,6 +148,7 @@ public class Piccione : NetworkBehaviour {
     }
 
     public void Slowdown() {
+        initialSpeed = speed;
         speed = speed / 2f;
         powerUpDuration = 0f;
     }

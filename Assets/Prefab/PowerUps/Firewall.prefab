@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb52f7b5c5ccbeb4caa0c26138adb572, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosion: {fileID: 1922387734818414, guid: ae9d4346475189a41be75e307550cc9a, type: 2}
+  explosion: {fileID: 1894998302948522, guid: bebae55256e7bc0428c48a8c1d79372e, type: 2}
 --- !u!135 &135878858049516594
 SphereCollider:
   m_ObjectHideFlags: 1

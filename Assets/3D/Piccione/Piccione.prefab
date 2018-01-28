@@ -7855,8 +7855,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d33d9d9d47acfbb49b19d333857517f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceModule: 10
-  maxVerticalSpeed: 15
+  forceModule: 5
+  maxVerticalSpeed: 9
   initialLife: 6
   lifes: 0
   skins:
@@ -7875,7 +7875,9 @@ MonoBehaviour:
   - {fileID: 1832463777443924}
   - {fileID: 1129726086342956}
   initialSpeed: 5
-  speed: 0
+  speedMax: 60
+  speedIncrementation: 1.1
+  fixedDeltaTimeIncrementation: 9
   minDeltaTimeDamage: 1
   maxPowerUpDuration: 7
   hudLife: {fileID: 0}
@@ -8354,7 +8356,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1717256643
+  randomSeed: -1241353602
   InitialModule:
     serializedVersion: 3
     enabled: 1
