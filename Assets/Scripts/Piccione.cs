@@ -36,8 +36,6 @@ public class Piccione : Photon.MonoBehaviour {
     private bool invincible;
     private bool noDowns;
 
-    public HudLife hudLife;
-
     private void Start() {
         rb = GetComponent<Rigidbody>();
         tr = GetComponent<Transform>();
@@ -95,7 +93,7 @@ public class Piccione : Photon.MonoBehaviour {
             return;
         lifes--;
 
-        hudLife.ChangeImage(lifes);
+        HudLife.Instance.ChangeImage(lifes);
 
         foreach (GameObject skin in skins)
             skin.SetActive(false);

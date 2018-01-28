@@ -16,12 +16,15 @@ public class ObstacleSpawner : MonoBehaviour {
     public float xDistanceSpawn;
     public float minY, maxY;
 
-    void Start () {
+    void Start() {
         deltaSpawnTime = 0f;
         creationIndex = 0;
     }
-	
-	void Update () {
+
+    void Update() {
+        if (!piccione)
+            return;
+
         deltaSpawnTime += Time.deltaTime;
         if (deltaSpawnTime >= minDeltaSpawnTime)
             CreateObstacle();
@@ -54,5 +57,9 @@ public class ObstacleSpawner : MonoBehaviour {
                     break;
             }
         deltaSpawnTime = 0f;
+    }
+
+    public void setTarget(Transform transform) {
+        piccione = transform;
     }
 }

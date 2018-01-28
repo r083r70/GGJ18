@@ -8,6 +8,6 @@ public class Slowdown : PowerUp {
     }
 
     protected override void AddToHUD() {
-        HudPowerUp.instance.AddPowUp(3, this);
+        HudPowerUp.Instance.AddPowUp(3, this);
     }
 }

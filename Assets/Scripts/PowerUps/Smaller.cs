@@ -8,6 +8,6 @@ public class Smaller : PowerUp {
     }
 
     protected override void AddToHUD() {
-        HudPowerUp.instance.AddPowUp(2, this);
+        HudPowerUp.Instance.AddPowUp(2, this);
     }
 }

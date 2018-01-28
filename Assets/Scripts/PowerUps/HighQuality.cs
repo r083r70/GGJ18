@@ -8,6 +8,6 @@ public class HighQuality : PowerUp {
     }
 
     protected override void AddToHUD() {
-        HudPowerUp.instance.AddPowUp(1, this);
+        HudPowerUp.Instance.AddPowUp(1, this);
     }
 }

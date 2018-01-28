@@ -9,6 +9,6 @@ public class Firewall : PowerUp {
     }
 
     protected override void AddToHUD() {
-        HudPowerUp.instance.AddPowUp(0, this);
+        HudPowerUp.Instance.AddPowUp(0, this);
     }
 }

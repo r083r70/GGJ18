@@ -15,16 +15,13 @@ public class PowerUpSpawner : MonoBehaviour {
     }
 
     private void Update() {
-        if (piccione == null)
-        {
+        if (!piccione)
             return;
-        }
 
         deltaSpawnTime += Time.deltaTime;
         if (deltaSpawnTime >= minDeltaSpawnTime)
             CreatePowerUp();
     }
-
 
     private void CreatePowerUp() {
         Vector3 initialPosition = piccione.position + Vector3.right * xDistanceSpawn;
@@ -33,8 +30,7 @@ public class PowerUpSpawner : MonoBehaviour {
         deltaSpawnTime = 0f;
     }
 
-    public void setTarget(Transform transform)
-    {
+    public void setTarget(Transform transform) {
         piccione = transform;
     }
 }

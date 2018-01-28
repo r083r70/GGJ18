@@ -6,11 +6,13 @@ using UnityEngine.UI;
 public class HudPowerUp : MonoBehaviour {
     public PowUp[] powUps;
     public Piccione piccione;
-
-    public static HudPowerUp instance;
+    static private HudPowerUp instance;
+    static public HudPowerUp Instance {
+        get { return instance; }
+    }
 
     private void Awake() {
-        if (instance != null)
+        if (instance)
             Destroy(gameObject);
         else
             instance = this;
