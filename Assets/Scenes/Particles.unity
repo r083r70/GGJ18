@@ -630,6 +630,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 615686564}
+--- !u!1 &720535102 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1924423847233054, guid: bc2e8cb84fa251b4695fd5adccfa12be,
+    type: 2}
+  m_PrefabInternal: {fileID: 1176625211}
+--- !u!65 &720535109
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 720535102}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 50, y: 50, z: 1}
+  m_Center: {x: 0, y: 0, z: -20}
 --- !u!1 &726116131
 GameObject:
   m_ObjectHideFlags: 0
