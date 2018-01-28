@@ -302,6 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b73e181816585549aa95328c5388e71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  obstaclePrefab: {fileID: 0}
 --- !u!222 &222158529921567974
 CanvasRenderer:
   m_ObjectHideFlags: 1
