@@ -5,6 +5,7 @@ using UnityEngine;
 public class InstantiatePlayerRole : Photon.PunBehaviour {
     public string pegeout = "piccione";
     public GameObject hackerPrefab;
+    public GameObject pegeoutPrefabHUD;
     public Vector3 pegeoutInitPosition;
 
 
@@ -16,6 +17,10 @@ public class InstantiatePlayerRole : Photon.PunBehaviour {
 
         if (PhotonNetwork.countOfPlayers == 1)
         {
+            GameObject pegeoutHUD = Instantiate(pegeoutPrefabHUD, pegeoutPrefabHUD.transform, false);
+            pegeoutHUD.transform.parent = canvas.transform;
+            pegeoutHUD.transform.position = Vector3.zero;
+
             PhotonNetwork.Instantiate(pegeout, pegeoutInitPosition, Quaternion.identity, 0);
         }
         else

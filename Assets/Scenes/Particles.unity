@@ -487,6 +487,8 @@ MonoBehaviour:
   pegeout: piccione
   hackerPrefab: {fileID: 1841157477750752, guid: e0e072d165f42ba46bd91d789af3b844,
     type: 2}
+  pegeoutPrefabHUD: {fileID: 1902259909443750, guid: 3d6b8c18d6941ab4a9321a862687cd51,
+    type: 2}
   pegeoutInitPosition: {x: -6.11, y: -8.37, z: 0}
 --- !u!4 &1433358525
 Transform:
