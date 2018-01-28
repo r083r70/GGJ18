@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class InstantiatePlayerRole : Photon.PunBehaviour {
     public string pegeout = "piccione";
+    public GameObject hackerPrefab;
     public Vector3 pegeoutInitPosition;
 
 
@@ -11,17 +12,17 @@ public class InstantiatePlayerRole : Photon.PunBehaviour {
     public override void OnJoinedRoom() {
         base.OnJoinedRoom();
 
-        Debug.Log("OnJoinedLobby");
+        GameObject canvas = GameObject.Find("Canvas");
 
         if (PhotonNetwork.countOfPlayers == 1)
         {
             PhotonNetwork.Instantiate(pegeout, pegeoutInitPosition, Quaternion.identity, 0);
-
         }
         else
         {
+            GameObject hacker = Instantiate(hackerPrefab, Vector3.zero, Quaternion.identity);
             Camera.main.fieldOfView = 115f;
-            Debug.Log("Rompicoglioni");
+            hacker.transform.parent = canvas.transform;
         }
 
         

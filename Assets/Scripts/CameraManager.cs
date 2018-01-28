@@ -19,7 +19,7 @@ public class CameraManager : MonoBehaviour {
     }
 
     void LateUpdate() {
-        if (tr == null)
+        if (piccione == null)
         {
             return;
         }

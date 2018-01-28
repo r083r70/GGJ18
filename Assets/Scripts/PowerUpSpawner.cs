@@ -29,7 +29,7 @@ public class PowerUpSpawner : MonoBehaviour {
     private void CreatePowerUp() {
         Vector3 initialPosition = piccione.position + Vector3.right * xDistanceSpawn;
         initialPosition.y = Random.Range(minY, maxY);
-        Instantiate(powerUp[Random.Range(0, powerUp.Length)], initialPosition, Quaternion.identity);
+        PhotonNetwork.Instantiate(powerUp[Random.Range(0, powerUp.Length)].name, initialPosition, Quaternion.identity, 0);
         deltaSpawnTime = 0f;
     }
 
