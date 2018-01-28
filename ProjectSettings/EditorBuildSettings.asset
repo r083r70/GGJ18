@@ -8,10 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Multi/ServerScene.unity
     guid: 7cee50ddd3963824d9b48542d81b8f96
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/MenuPrincipale.unity
     guid: 66ce2a0a8a9011b469119e3e7c362c03
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/scenaVideo.unity
     guid: 64828afd2d9297e40bfb8f5338759a25
   - enabled: 1
