@@ -36,21 +36,21 @@ public class ObstacleSpawner : MonoBehaviour {
                 case 0: break;
                 case 1:
                     initialPosition.y = Random.Range(minY, maxY);
-                    var k = Instantiate(obstacle, initialPosition, Quaternion.identity);
+                    PhotonNetwork.Instantiate(obstacle.name, initialPosition, Quaternion.identity, 0);
                     break;
                 case 2:
                     initialPosition.y = Random.Range(minY, -0.3f);
-                    Instantiate(obstacle, initialPosition, Quaternion.identity);
+                    PhotonNetwork.Instantiate(obstacle.name, initialPosition, Quaternion.identity, 0);
                     initialPosition.y = Random.Range(0.3f, maxY);
-                    Instantiate(obstacle, initialPosition, Quaternion.identity);
+                    PhotonNetwork.Instantiate(obstacle.name, initialPosition, Quaternion.identity, 0);
                     break;
                 case 3:
                     initialPosition.y = Random.Range(minY, -1.1f);
-                    Instantiate(obstacle, initialPosition, Quaternion.identity);
+                    PhotonNetwork.Instantiate(obstacle.name, initialPosition, Quaternion.identity, 0);
                     initialPosition.y = Random.Range(-1.1f, 1.1f);
-                    Instantiate(obstacle, initialPosition, Quaternion.identity);
+                    PhotonNetwork.Instantiate(obstacle.name, initialPosition, Quaternion.identity, 0);
                     initialPosition.y = Random.Range(1.1f, maxY);
-                    Instantiate(obstacle, initialPosition, Quaternion.identity);
+                    PhotonNetwork.Instantiate(obstacle.name, initialPosition, Quaternion.identity, 0);
                     break;
             }
         deltaSpawnTime = 0f;

@@ -2516,10 +2516,10 @@ GameObject:
   - component: {fileID: 54268424283032040}
   - component: {fileID: 198924548019086660}
   - component: {fileID: 199597572923797902}
-  - component: {fileID: 114779533228806878}
   - component: {fileID: 136806525225082070}
-  - component: {fileID: 114938519552684868}
-  - component: {fileID: 114696765762632528}
+  - component: {fileID: 114779533228806878}
+  - component: {fileID: 114013309095811516}
+  - component: {fileID: 114736466794110630}
   m_Layer: 0
   m_Name: Piccione
   m_TagString: Player
@@ -7823,7 +7823,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114696765762632528
+--- !u!114 &114013309095811516
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -7831,19 +7831,89 @@ MonoBehaviour:
   m_GameObject: {fileID: 1924423847233054}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TransformSyncMode: 3
-  m_SendInterval: 0.1
-  m_SyncRotationAxis: 7
-  m_RotationSyncCompression: 0
-  m_SyncSpin: 0
-  m_MovementTheshold: 0.001
-  m_VelocityThreshold: 0.0001
-  m_SnapThreshold: 5
-  m_InterpolateRotation: 1
-  m_InterpolateMovement: 1
+  ownerId: 0
+  group: 0
+  OwnerShipWasTransfered: 0
+  prefixBackup: -1
+  synchronization: 3
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 114736466794110630}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 0
+  instantiationId: -1
+  currentMasterID: -1
+  isRuntimeInstantiated: 0
+--- !u!114 &114736466794110630
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1924423847233054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PositionModel:
+    SynchronizeEnabled: 1
+    TeleportEnabled: 1
+    TeleportIfDistanceGreaterThan: 3
+    InterpolateOption: 2
+    InterpolateMoveTowardsSpeed: 1
+    InterpolateLerpSpeed: 1
+    InterpolateMoveTowardsAcceleration: 2
+    InterpolateMoveTowardsDeceleration: 2
+    InterpolateSpeedCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 2
+        time: -1
+        value: 0
+        inSlope: 0
+        outSlope: Infinity
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 1
+        tangentMode: 0
+      - serializedVersion: 2
+        time: 4
+        value: 4
+        inSlope: 1
+        outSlope: 0
+        tangentMode: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    ExtrapolateOption: 0
+    ExtrapolateSpeed: 1
+    ExtrapolateIncludingRoundTripTime: 1
+    ExtrapolateNumberOfStoredPositions: 1
+    DrawErrorGizmo: 1
+  m_RotationModel:
+    SynchronizeEnabled: 1
+    InterpolateOption: 1
+    InterpolateRotateTowardsSpeed: 180
+    InterpolateLerpSpeed: 5
+  m_ScaleModel:
+    SynchronizeEnabled: 0
+    InterpolateOption: 0
+    InterpolateMoveTowardsSpeed: 1
+    InterpolateLerpSpeed: 0
 --- !u!114 &114779533228806878
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7881,38 +7951,6 @@ MonoBehaviour:
   minDeltaTimeDamage: 1
   maxPowerUpDuration: 7
   hudLife: {fileID: 0}
---- !u!114 &114938519552684868
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1924423847233054}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SceneId:
-    m_Value: 0
-  m_AssetId:
-    i0: 188
-    i1: 46
-    i2: 140
-    i3: 184
-    i4: 79
-    i5: 162
-    i6: 81
-    i7: 180
-    i8: 105
-    i9: 95
-    i10: 213
-    i11: 173
-    i12: 204
-    i13: 250
-    i14: 18
-    i15: 190
-  m_ServerOnly: 1
-  m_LocalPlayerAuthority: 0
 --- !u!136 &136806525225082070
 CapsuleCollider:
   m_ObjectHideFlags: 1

@@ -113,14 +113,7 @@ public class Piccione : Photon.MonoBehaviour {
     private void Death() {
         ; // TODO
     }
-
-    public override void OnStartClient() {
-        base.OnStartClient();
-
-        Debug.Log("2");
-        SceneManager.LoadScene("PiccioneNuovo", LoadSceneMode.Additive);
-    }
-
+    
     private void OnCollisionEnter(Collision collision) {
         if (collision.gameObject.CompareTag("Borders"))
             RemoveLife();

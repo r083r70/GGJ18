@@ -8,6 +8,6 @@ public class Obstacle : MonoBehaviour {
 
 	public void Explode() {
         gameObject.SetActive(false);
-        Instantiate(explosion, GetComponent<Transform>().position, Quaternion.identity);
+        PhotonNetwork.Instantiate(explosion.name, GetComponent<Transform>().position, Quaternion.identity, 0);
     }
 }

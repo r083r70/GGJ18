@@ -10,7 +10,7 @@ public abstract class PowerUp : MonoBehaviour {
         if (other.gameObject.CompareTag("Player"))
             AddToHUD();
         gameObject.SetActive(false);
-        Instantiate(explosion, GetComponent<Transform>().position, Quaternion.identity);
+        PhotonNetwork.Instantiate(explosion.name, GetComponent<Transform>().position, Quaternion.identity, 0);
     }
 
     protected abstract void AddToHUD();

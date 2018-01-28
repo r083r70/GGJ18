@@ -762,6 +762,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114013309095811516, guid: bc2e8cb84fa251b4695fd5adccfa12be,
+        type: 2}
+      propertyPath: ObservedComponents.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4765791840589954, guid: bc2e8cb84fa251b4695fd5adccfa12be, type: 2}
       propertyPath: m_LocalPosition.x
       value: -6.11
@@ -799,6 +804,16 @@ Prefab:
       propertyPath: hudLife
       value: 
       objectReference: {fileID: 1829701910}
+    - target: {fileID: 114013309095811516, guid: bc2e8cb84fa251b4695fd5adccfa12be,
+        type: 2}
+      propertyPath: instantiationId
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114013309095811516, guid: bc2e8cb84fa251b4695fd5adccfa12be,
+        type: 2}
+      propertyPath: viewIdField
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bc2e8cb84fa251b4695fd5adccfa12be, type: 2}
   m_IsPrefabParent: 0
