@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Smaller : PowerUp {
     public override void PowerUpEffect(Piccione p) {
-        p.Smaller();
+        //p.Smaller();
     }
 
     protected override void AddToHUD() {
-        HudPowerUp.Instance.AddPowUp(2, this);
+        HudManager.Instance.Change(2, true);
     }
 }

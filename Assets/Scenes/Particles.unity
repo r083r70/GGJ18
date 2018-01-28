@@ -221,7 +221,7 @@ MonoBehaviour:
     type: 2}
   pegeoutPrefabHUD: {fileID: 1771930887808248, guid: 296cc9cae2e09dd4eacfb3279a7a7548,
     type: 2}
-  pegeoutInitPosition: {x: -6.11, y: -8.37, z: -2.43}
+  pegeoutInitPosition: {x: -2.53, y: -8.37, z: -2.43}
 --- !u!1001 &149720137
 Prefab:
   m_ObjectHideFlags: 0

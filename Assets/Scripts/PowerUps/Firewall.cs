@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class Firewall : PowerUp {
     public override void PowerUpEffect(Piccione p) {
-        p.Firewall();
+        //p.Firewall();
     }
 
     protected override void AddToHUD() {
-        HudPowerUp.Instance.AddPowUp(0, this);
+        HudManager.Instance.Change(3, true);
     }
 }

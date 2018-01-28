@@ -1,0 +1,161 @@
+fileFormatVersion: 2
+guid: 87b33bff7eda6944f8df92e67e8c5462
+timeCreated: 1517142931
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Anello_01
+    100004: Anello_02
+    100006: Anello_03
+    100008: Anello_04
+    100010: Cerchio Vita
+    100012: Cylinder001
+    100014: Object001
+    100016: PowerUp_01
+    100018: PowerUp_02
+    100020: PowerUp_03
+    100022: PowerUp_04
+    100024: Struttura
+    400000: //RootNode
+    400002: Anello_01
+    400004: Anello_02
+    400006: Anello_03
+    400008: Anello_04
+    400010: Cerchio Vita
+    400012: Cylinder001
+    400014: Object001
+    400016: PowerUp_01
+    400018: PowerUp_02
+    400020: PowerUp_03
+    400022: PowerUp_04
+    400024: Struttura
+    2100000: 07 - Default
+    2100002: 08 - Default
+    2100004: 09 - Default
+    2100006: 14 - Default
+    2100008: 19 - Default
+    2100010: 04 - Default
+    2100012: 13 - Default
+    2100014: 15 - Default
+    2100016: 20 - Default
+    2100018: 02 - Default
+    2100020: 05 - Default
+    2100022: No Name
+    2300000: Anello_01
+    2300002: Anello_02
+    2300004: Anello_03
+    2300006: Anello_04
+    2300008: Cerchio Vita
+    2300010: Cylinder001
+    2300012: Object001
+    2300014: PowerUp_01
+    2300016: PowerUp_02
+    2300018: PowerUp_03
+    2300020: PowerUp_04
+    2300022: Struttura
+    3300000: Anello_01
+    3300002: Anello_02
+    3300004: Anello_03
+    3300006: Anello_04
+    3300008: Cerchio Vita
+    3300010: Cylinder001
+    3300012: Object001
+    3300014: PowerUp_01
+    3300016: PowerUp_02
+    3300018: PowerUp_03
+    3300020: PowerUp_04
+    3300022: Struttura
+    4300000: Struttura
+    4300002: Cerchio Vita
+    4300004: PowerUp_01
+    4300006: PowerUp_02
+    4300008: PowerUp_03
+    4300010: PowerUp_04
+    4300012: Anello_01
+    4300014: Anello_02
+    4300016: Anello_03
+    4300018: Anello_04
+    4300020: Object001
+    4300022: Cylinder001
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

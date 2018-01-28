@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Slowdown : PowerUp {
     public override void PowerUpEffect(Piccione p) {
-        p.Slowdown();
+        //p.Slowdown();
     }
 
     protected override void AddToHUD() {
-        HudPowerUp.Instance.AddPowUp(3, this);
+        HudManager.Instance.Change(4, true);
     }
 }

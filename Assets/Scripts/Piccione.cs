@@ -93,7 +93,7 @@ public class Piccione : Photon.MonoBehaviour {
             return;
         lifes--;
 
-        HudLife.Instance.ChangeImage(lifes);
+        HudManager.Instance.UpdateLife(lifes);
 
         foreach (GameObject skin in skins)
             skin.SetActive(false);
